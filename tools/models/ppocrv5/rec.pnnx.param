@@ -1,0 +1,166 @@
+7767517
+164 163
+pnnx.Input               in0                      0 1 0 #0=(1,3,48,?)f32
+nn.Conv2d                convbn2d_0               1 1 0 1 bias=True dilation=(1,1) groups=1 in_channels=3 kernel_size=(3,3) out_channels=16 padding=(1,1) padding_mode=zeros stride=(2,2) @bias=(16)f32 @weight=(16,3,3,3)f32 $input=0 #0=(1,3,48,?)f32 #1=(1,16,24,?)f32
+nn.Conv2d                conv2d_6                 1 1 1 2 bias=True dilation=(1,1) groups=16 in_channels=16 kernel_size=(3,3) out_channels=16 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(16)f32 @weight=(16,1,3,3)f32 $input=1 #1=(1,16,24,?)f32 #2=(1,16,24,?)f32
+pnnx.Expression          pnnx_expr_242            1 1 2 3 expr=add(mul(0.618031085,@0),0.187707946) #2=(1,16,24,?)f32 #3=(1,16,24,?)f32
+F.hardswish              F.hardswish_57           1 1 3 4 $input=3 #3=(1,16,24,?)f32 #4=(1,16,24,?)f32
+pnnx.Expression          pnnx_expr_238            1 1 4 5 expr=add(mul(9.57465917e-3,@0),-4.11757035e-4) #4=(1,16,24,?)f32 #5=(1,16,24,?)f32
+nn.Conv2d                conv2d_7                 1 1 5 6 bias=True dilation=(1,1) groups=1 in_channels=16 kernel_size=(1,1) out_channels=32 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(32)f32 @weight=(32,16,1,1)f32 $input=5 #5=(1,16,24,?)f32 #6=(1,32,24,?)f32
+pnnx.Expression          pnnx_expr_234            1 1 6 7 expr=add(mul(0.734481156,@0),0.242520183) #6=(1,32,24,?)f32 #7=(1,32,24,?)f32
+F.hardswish              F.hardswish_58           1 1 7 8 $input=7 #7=(1,32,24,?)f32 #8=(1,32,24,?)f32
+pnnx.Expression          pnnx_expr_230            1 1 8 9 expr=add(mul(0.197885543,@0),-0.191666022) #8=(1,32,24,?)f32 #9=(1,32,24,?)f32
+nn.Conv2d                conv2d_8                 1 1 9 10 bias=True dilation=(1,1) groups=32 in_channels=32 kernel_size=(3,3) out_channels=32 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(32)f32 @weight=(32,1,3,3)f32 $input=9 #9=(1,32,24,?)f32 #10=(1,32,24,?)f32
+pnnx.Expression          pnnx_expr_226            1 1 10 11 expr=add(mul(0.56769383,@0),0.295256317) #10=(1,32,24,?)f32 #11=(1,32,24,?)f32
+F.hardswish              F.hardswish_59           1 1 11 12 $input=11 #11=(1,32,24,?)f32 #12=(1,32,24,?)f32
+pnnx.Expression          pnnx_expr_222            1 1 12 13 expr=add(mul(0.17821452,@0),1.09163830e-5) #12=(1,32,24,?)f32 #13=(1,32,24,?)f32
+nn.Conv2d                conv2d_9                 1 1 13 14 bias=True dilation=(1,1) groups=1 in_channels=32 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,32,1,1)f32 $input=13 #13=(1,32,24,?)f32 #14=(1,64,24,?)f32
+pnnx.Expression          pnnx_expr_218            1 1 14 15 expr=add(mul(0.786464632,@0),0.217505515) #14=(1,64,24,?)f32 #15=(1,64,24,?)f32
+F.hardswish              F.hardswish_60           1 1 15 16 $input=15 #15=(1,64,24,?)f32 #16=(1,64,24,?)f32
+pnnx.Expression          pnnx_expr_214            1 1 16 17 expr=add(mul(0.168004766,@0),-0.397175312) #16=(1,64,24,?)f32 #17=(1,64,24,?)f32
+nn.Conv2d                conv2d_10                1 1 17 18 bias=True dilation=(1,1) groups=64 in_channels=64 kernel_size=(3,3) out_channels=64 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,1,3,3)f32 $input=17 #17=(1,64,24,?)f32 #18=(1,64,24,?)f32
+pnnx.Expression          pnnx_expr_210            1 1 18 19 expr=add(mul(1.43575656,@0),4.22556214e-2) #18=(1,64,24,?)f32 #19=(1,64,24,?)f32
+F.hardswish              F.hardswish_61           1 1 19 20 $input=19 #19=(1,64,24,?)f32 #20=(1,64,24,?)f32
+pnnx.Expression          pnnx_expr_206            1 1 20 21 expr=add(mul(0.020996172,@0),4.97774236e-5) #20=(1,64,24,?)f32 #21=(1,64,24,?)f32
+nn.Conv2d                conv2d_11                1 1 21 22 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(1,1) out_channels=64 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(64)f32 @weight=(64,64,1,1)f32 $input=21 #21=(1,64,24,?)f32 #22=(1,64,24,?)f32
+pnnx.Expression          pnnx_expr_202            1 1 22 23 expr=add(mul(0.890910566,@0),0.160509363) #22=(1,64,24,?)f32 #23=(1,64,24,?)f32
+F.hardswish              F.hardswish_62           1 1 23 24 $input=23 #23=(1,64,24,?)f32 #24=(1,64,24,?)f32
+pnnx.Expression          pnnx_expr_198            1 1 24 25 expr=add(mul(0.196840346,@0),-0.124942675) #24=(1,64,24,?)f32 #25=(1,64,24,?)f32
+nn.Conv2d                conv2d_12                1 1 25 26 bias=True dilation=(1,1) groups=64 in_channels=64 kernel_size=(3,3) out_channels=64 padding=(1,1) padding_mode=zeros stride=(2,1) @bias=(64)f32 @weight=(64,1,3,3)f32 $input=25 #25=(1,64,24,?)f32 #26=(1,64,12,?)f32
+pnnx.Expression          pnnx_expr_194            1 1 26 27 expr=add(mul(0.532039046,@0),0.300257295) #26=(1,64,12,?)f32 #27=(1,64,12,?)f32
+F.hardswish              F.hardswish_63           1 1 27 28 $input=27 #27=(1,64,12,?)f32 #28=(1,64,12,?)f32
+pnnx.Expression          pnnx_expr_190            1 1 28 29 expr=add(mul(4.33737412e-2,@0),4.01585567e-6) #28=(1,64,12,?)f32 #29=(1,64,12,?)f32
+nn.Conv2d                conv2d_13                1 1 29 30 bias=True dilation=(1,1) groups=1 in_channels=64 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,64,1,1)f32 $input=29 #29=(1,64,12,?)f32 #30=(1,128,12,?)f32
+pnnx.Expression          pnnx_expr_186            1 1 30 31 expr=add(mul(0.643982649,@0),0.3766267) #30=(1,128,12,?)f32 #31=(1,128,12,?)f32
+F.hardswish              F.hardswish_64           1 1 31 32 $input=31 #31=(1,128,12,?)f32 #32=(1,128,12,?)f32
+pnnx.Expression          pnnx_expr_182            1 1 32 33 expr=add(mul(0.251938879,@0),-0.34850055) #32=(1,128,12,?)f32 #33=(1,128,12,?)f32
+nn.Conv2d                conv2d_14                1 1 33 34 bias=True dilation=(1,1) groups=128 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,1,3,3)f32 $input=33 #33=(1,128,12,?)f32 #34=(1,128,12,?)f32
+pnnx.Expression          pnnx_expr_178            1 1 34 35 expr=add(mul(1.03335524,@0),0.105797522) #34=(1,128,12,?)f32 #35=(1,128,12,?)f32
+F.hardswish              F.hardswish_65           1 1 35 36 $input=35 #35=(1,128,12,?)f32 #36=(1,128,12,?)f32
+pnnx.Expression          pnnx_expr_174            1 1 36 37 expr=add(mul(4.06618118e-2,@0),-4.833737e-6) #36=(1,128,12,?)f32 #37=(1,128,12,?)f32
+nn.Conv2d                conv2d_15                1 1 37 38 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=128 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(128)f32 @weight=(128,128,1,1)f32 $input=37 #37=(1,128,12,?)f32 #38=(1,128,12,?)f32
+pnnx.Expression          pnnx_expr_170            1 1 38 39 expr=add(mul(0.74921447,@0),0.181501523) #38=(1,128,12,?)f32 #39=(1,128,12,?)f32
+F.hardswish              F.hardswish_66           1 1 39 40 $input=39 #39=(1,128,12,?)f32 #40=(1,128,12,?)f32
+pnnx.Expression          pnnx_expr_166            1 1 40 41 expr=add(mul(0.36045447,@0),-6.97199851e-2) #40=(1,128,12,?)f32 #41=(1,128,12,?)f32
+nn.Conv2d                conv2d_16                1 1 41 42 bias=True dilation=(1,1) groups=128 in_channels=128 kernel_size=(3,3) out_channels=128 padding=(1,1) padding_mode=zeros stride=(1,2) @bias=(128)f32 @weight=(128,1,3,3)f32 $input=41 #41=(1,128,12,?)f32 #42=(1,128,12,?)f32
+pnnx.Expression          pnnx_expr_162            1 1 42 43 expr=add(mul(0.48137337,@0),0.207610264) #42=(1,128,12,?)f32 #43=(1,128,12,?)f32
+F.hardswish              F.hardswish_67           1 1 43 44 $input=43 #43=(1,128,12,?)f32 #44=(1,128,12,?)f32
+pnnx.Expression          pnnx_expr_158            1 1 44 45 expr=add(mul(0.051053483,@0),1.921835e-5) #44=(1,128,12,?)f32 #45=(1,128,12,?)f32
+nn.Conv2d                conv2d_17                1 1 45 46 bias=True dilation=(1,1) groups=1 in_channels=128 kernel_size=(1,1) out_channels=240 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(240)f32 @weight=(240,128,1,1)f32 $input=45 #45=(1,128,12,?)f32 #46=(1,240,12,?)f32
+pnnx.Expression          pnnx_expr_154            1 1 46 47 expr=add(mul(0.650918603,@0),0.339274257) #46=(1,240,12,?)f32 #47=(1,240,12,?)f32
+F.hardswish              F.hardswish_68           1 1 47 48 $input=47 #47=(1,240,12,?)f32 #48=(1,240,12,?)f32
+pnnx.Expression          pnnx_expr_150            1 1 48 49 expr=add(mul(0.404994488,@0),-0.301044) #48=(1,240,12,?)f32 #49=(1,240,12,?)f32
+nn.Conv2d                conv2d_18                1 1 49 50 bias=True dilation=(1,1) groups=240 in_channels=240 kernel_size=(5,5) out_channels=240 padding=(2,2) padding_mode=zeros stride=(1,1) @bias=(240)f32 @weight=(240,1,5,5)f32 $input=49 #49=(1,240,12,?)f32 #50=(1,240,12,?)f32
+pnnx.Expression          pnnx_expr_146            1 1 50 51 expr=add(mul(0.504058361,@0),4.11373712e-2) #50=(1,240,12,?)f32 #51=(1,240,12,?)f32
+F.hardswish              F.hardswish_69           1 1 51 52 $input=51 #51=(1,240,12,?)f32 #52=(1,240,12,?)f32
+pnnx.Expression          pnnx_expr_142            1 1 52 53 expr=add(mul(3.39291878e-2,@0),-7.692371e-6) #52=(1,240,12,?)f32 #53=(1,240,12,?)f32
+nn.Conv2d                conv2d_19                1 1 53 54 bias=True dilation=(1,1) groups=1 in_channels=240 kernel_size=(1,1) out_channels=240 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(240)f32 @weight=(240,240,1,1)f32 $input=53 #53=(1,240,12,?)f32 #54=(1,240,12,?)f32
+pnnx.Expression          pnnx_expr_138            1 1 54 55 expr=add(mul(0.63970679,@0),0.188141629) #54=(1,240,12,?)f32 #55=(1,240,12,?)f32
+F.hardswish              F.hardswish_70           1 1 55 56 $input=55 #55=(1,240,12,?)f32 #56=(1,240,12,?)f32
+pnnx.Expression          pnnx_expr_134            1 1 56 57 expr=add(mul(0.424111217,@0),-0.203310505) #56=(1,240,12,?)f32 #57=(1,240,12,?)f32
+nn.Conv2d                conv2d_20                1 1 57 58 bias=True dilation=(1,1) groups=240 in_channels=240 kernel_size=(5,5) out_channels=240 padding=(2,2) padding_mode=zeros stride=(1,1) @bias=(240)f32 @weight=(240,1,5,5)f32 $input=57 #57=(1,240,12,?)f32 #58=(1,240,12,?)f32
+pnnx.Expression          pnnx_expr_130            1 1 58 59 expr=add(mul(0.383856386,@0),-9.41170659e-3) #58=(1,240,12,?)f32 #59=(1,240,12,?)f32
+F.hardswish              F.hardswish_71           1 1 59 60 $input=59 #59=(1,240,12,?)f32 #60=(1,240,12,?)f32
+pnnx.Expression          pnnx_expr_126            1 1 60 61 expr=add(mul(1.99459977e-2,@0),1.35511291e-4) #60=(1,240,12,?)f32 #61=(1,240,12,?)f32
+nn.Conv2d                conv2d_21                1 1 61 62 bias=True dilation=(1,1) groups=1 in_channels=240 kernel_size=(1,1) out_channels=240 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(240)f32 @weight=(240,240,1,1)f32 $input=61 #61=(1,240,12,?)f32 #62=(1,240,12,?)f32
+pnnx.Expression          pnnx_expr_122            1 1 62 63 expr=add(mul(0.661310136,@0),-1.77426897e-2) #62=(1,240,12,?)f32 #63=(1,240,12,?)f32
+F.hardswish              F.hardswish_72           1 1 63 64 $input=63 #63=(1,240,12,?)f32 #64=(1,240,12,?)f32
+pnnx.Expression          pnnx_expr_118            1 1 64 65 expr=add(mul(0.587085307,@0),2.64926651e-3) #64=(1,240,12,?)f32 #65=(1,240,12,?)f32
+nn.Conv2d                conv2d_22                1 1 65 66 bias=True dilation=(1,1) groups=240 in_channels=240 kernel_size=(5,5) out_channels=240 padding=(2,2) padding_mode=zeros stride=(1,1) @bias=(240)f32 @weight=(240,1,5,5)f32 $input=65 #65=(1,240,12,?)f32 #66=(1,240,12,?)f32
+pnnx.Expression          pnnx_expr_114            1 1 66 67 expr=add(mul(0.318789452,@0),0.295758754) #66=(1,240,12,?)f32 #67=(1,240,12,?)f32
+F.hardswish              F.hardswish_73           1 1 67 68 $input=67 #67=(1,240,12,?)f32 #68=(1,240,12,?)f32
+pnnx.Expression          pnnx_expr_110            1 1 68 69 expr=add(mul(0.018465152,@0),7.642443e-5) #68=(1,240,12,?)f32 #69=(1,240,12,?)f32
+nn.Conv2d                conv2d_23                1 1 69 70 bias=True dilation=(1,1) groups=1 in_channels=240 kernel_size=(1,1) out_channels=240 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(240)f32 @weight=(240,240,1,1)f32 $input=69 #69=(1,240,12,?)f32 #70=(1,240,12,?)f32
+pnnx.Expression          pnnx_expr_106            1 1 70 71 expr=add(mul(0.627805114,@0),-0.141456604) #70=(1,240,12,?)f32 #71=(1,240,12,?)f32
+F.hardswish              F.hardswish_74           1 1 71 72 $input=71 #71=(1,240,12,?)f32 #72=(1,240,12,?)f32
+pnnx.Expression          pnnx_expr_102            1 1 72 73 expr=add(mul(0.633296132,@0),0.14722079) #72=(1,240,12,?)f32 #73=(1,240,12,?)f32
+nn.Conv2d                conv2d_24                1 1 73 74 bias=True dilation=(1,1) groups=240 in_channels=240 kernel_size=(5,5) out_channels=240 padding=(2,2) padding_mode=zeros stride=(1,1) @bias=(240)f32 @weight=(240,1,5,5)f32 $input=73 #73=(1,240,12,?)f32 #74=(1,240,12,?)f32
+pnnx.Expression          pnnx_expr_98             1 1 74 75 expr=add(mul(0.316436142,@0),0.405378) #74=(1,240,12,?)f32 #75=(1,240,12,?)f32
+F.hardswish              F.hardswish_75           1 1 75 76 $input=75 #75=(1,240,12,?)f32 #76=(1,240,12,?)f32
+pnnx.Expression          pnnx_expr_94             1 1 76 77 expr=add(mul(0.019493958,@0),-8.61053049e-5) #76=(1,240,12,?)f32 #77=(1,240,12,?)f32
+nn.Conv2d                conv2d_25                1 1 77 78 bias=True dilation=(1,1) groups=1 in_channels=240 kernel_size=(1,1) out_channels=240 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(240)f32 @weight=(240,240,1,1)f32 $input=77 #77=(1,240,12,?)f32 #78=(1,240,12,?)f32
+pnnx.Expression          pnnx_expr_90             1 1 78 79 expr=add(mul(0.547101259,@0),-0.20700857) #78=(1,240,12,?)f32 #79=(1,240,12,?)f32
+F.hardswish              F.hardswish_76           1 1 79 80 $input=79 #79=(1,240,12,?)f32 #80=(1,240,12,?)f32
+pnnx.Expression          pnnx_expr_86             1 1 80 81 expr=add(mul(0.531144142,@0),0.174474344) #80=(1,240,12,?)f32 #81=(1,240,12,?)f32
+nn.Conv2d                conv2d_26                1 1 81 82 bias=True dilation=(1,1) groups=240 in_channels=240 kernel_size=(5,5) out_channels=240 padding=(2,2) padding_mode=zeros stride=(2,1) @bias=(240)f32 @weight=(240,1,5,5)f32 $input=81 #81=(1,240,12,?)f32 #82=(1,240,6,?)f32
+pnnx.Expression          pnnx_expr_82             1 1 82 83 expr=add(mul(0.801708043,@0),0.304909974) #82=(1,240,6,?)f32 #83=(1,240,6,?)f32
+F.hardswish              F.hardswish_77           1 1 83 84 $input=83 #83=(1,240,6,?)f32 #84=(1,240,6,?)f32
+pnnx.Expression          pnnx_expr_78             1 1 84 85 expr=add(mul(1.07229424,@0),-0.893250883) #84=(1,240,6,?)f32 #85=(1,240,6,?)f32
+F.adaptive_avg_pool2d    F.adaptive_avg_pool2d_126 1 1 85 86 output_size=(1,1) $input=85 #85=(1,240,6,?)f32 #86=(1,240,1,1)f32
+nn.Conv2d                conv2d_27                1 1 86 87 bias=True dilation=(1,1) groups=1 in_channels=240 kernel_size=(1,1) out_channels=60 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(60)f32 @weight=(60,240,1,1)f32 $input=86 #86=(1,240,1,1)f32 #87=(1,60,1,1)f32
+F.relu                   F.relu_85                1 1 87 88 $input=87 #87=(1,60,1,1)f32 #88=(1,60,1,1)f32
+nn.Conv2d                conv2d_28                1 1 88 89 bias=True dilation=(1,1) groups=1 in_channels=60 kernel_size=(1,1) out_channels=240 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(240)f32 @weight=(240,60,1,1)f32 $input=88 #88=(1,60,1,1)f32 #89=(1,240,1,1)f32
+F.hardsigmoid            F.hardsigmoid_94         1 1 89 90 $input=89 #89=(1,240,1,1)f32 #90=(1,240,1,1)f32
+pnnx.Expression          pnnx_expr_77             2 1 85 90 91 expr=mul(@0,@1) #85=(1,240,6,?)f32 #90=(1,240,1,1)f32 #91=(1,240,6,?)f32
+nn.Conv2d                conv2d_29                1 1 91 92 bias=True dilation=(1,1) groups=1 in_channels=240 kernel_size=(1,1) out_channels=480 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(480)f32 @weight=(480,240,1,1)f32 $input=91 #91=(1,240,6,?)f32 #92=(1,480,6,?)f32
+pnnx.Expression          pnnx_expr_73             1 1 92 93 expr=add(mul(0.538069606,@0),-0.101367228) #92=(1,480,6,?)f32 #93=(1,480,6,?)f32
+F.hardswish              F.hardswish_78           1 1 93 94 $input=93 #93=(1,480,6,?)f32 #94=(1,480,6,?)f32
+pnnx.Expression          pnnx_expr_69             1 1 94 95 expr=add(mul(0.666713893,@0),7.15439394e-2) #94=(1,480,6,?)f32 #95=(1,480,6,?)f32
+nn.Conv2d                conv2d_30                1 1 95 96 bias=True dilation=(1,1) groups=480 in_channels=480 kernel_size=(5,5) out_channels=480 padding=(2,2) padding_mode=zeros stride=(1,1) @bias=(480)f32 @weight=(480,1,5,5)f32 $input=95 #95=(1,480,6,?)f32 #96=(1,480,6,?)f32
+pnnx.Expression          pnnx_expr_65             1 1 96 97 expr=add(mul(1.04520488,@0),4.80609499e-2) #96=(1,480,6,?)f32 #97=(1,480,6,?)f32
+F.hardswish              F.hardswish_79           1 1 97 98 $input=97 #97=(1,480,6,?)f32 #98=(1,480,6,?)f32
+pnnx.Expression          pnnx_expr_61             1 1 98 99 expr=add(mul(1.45315039,@0),-1.49933839) #98=(1,480,6,?)f32 #99=(1,480,6,?)f32
+F.adaptive_avg_pool2d    F.adaptive_avg_pool2d_127 1 1 99 100 output_size=(1,1) $input=99 #99=(1,480,6,?)f32 #100=(1,480,1,1)f32
+nn.Conv2d                conv2d_31                1 1 100 101 bias=True dilation=(1,1) groups=1 in_channels=480 kernel_size=(1,1) out_channels=120 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(120)f32 @weight=(120,480,1,1)f32 $input=100 #100=(1,480,1,1)f32 #101=(1,120,1,1)f32
+F.relu                   F.relu_86                1 1 101 102 $input=101 #101=(1,120,1,1)f32 #102=(1,120,1,1)f32
+nn.Conv2d                conv2d_32                1 1 102 103 bias=True dilation=(1,1) groups=1 in_channels=120 kernel_size=(1,1) out_channels=480 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(480)f32 @weight=(480,120,1,1)f32 $input=102 #102=(1,120,1,1)f32 #103=(1,480,1,1)f32
+F.hardsigmoid            F.hardsigmoid_95         1 1 103 104 $input=103 #103=(1,480,1,1)f32 #104=(1,480,1,1)f32
+pnnx.Expression          pnnx_expr_60             2 1 99 104 105 expr=mul(@0,@1) #99=(1,480,6,?)f32 #104=(1,480,1,1)f32 #105=(1,480,6,?)f32
+nn.Conv2d                conv2d_33                1 1 105 106 bias=True dilation=(1,1) groups=1 in_channels=480 kernel_size=(1,1) out_channels=480 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(480)f32 @weight=(480,480,1,1)f32 $input=105 #105=(1,480,6,?)f32 #106=(1,480,6,?)f32
+pnnx.Expression          pnnx_expr_56             1 1 106 107 expr=add(mul(0.621536672,@0),-0.334171057) #106=(1,480,6,?)f32 #107=(1,480,6,?)f32
+F.hardswish              F.hardswish_80           1 1 107 108 $input=107 #107=(1,480,6,?)f32 #108=(1,480,6,?)f32
+pnnx.Expression          pnnx_expr_52             1 1 108 109 expr=add(mul(0.593209565,@0),0.183921009) #108=(1,480,6,?)f32 #109=(1,480,6,?)f32
+nn.Conv2d                conv2d_34                1 1 109 110 bias=True dilation=(1,1) groups=480 in_channels=480 kernel_size=(5,5) out_channels=480 padding=(2,2) padding_mode=zeros stride=(2,1) @bias=(480)f32 @weight=(480,1,5,5)f32 $input=109 #109=(1,480,6,?)f32 #110=(1,480,3,?)f32
+pnnx.Expression          pnnx_expr_48             1 1 110 111 expr=add(mul(0.283224165,@0),0.625356317) #110=(1,480,3,?)f32 #111=(1,480,3,?)f32
+F.hardswish              F.hardswish_81           1 1 111 112 $input=111 #111=(1,480,3,?)f32 #112=(1,480,3,?)f32
+pnnx.Expression          pnnx_expr_44             1 1 112 113 expr=add(mul(6.91398932e-3,@0),5.59489825e-4) #112=(1,480,3,?)f32 #113=(1,480,3,?)f32
+nn.Conv2d                conv2d_35                1 1 113 114 bias=True dilation=(1,1) groups=1 in_channels=480 kernel_size=(1,1) out_channels=480 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(480)f32 @weight=(480,480,1,1)f32 $input=113 #113=(1,480,3,?)f32 #114=(1,480,3,?)f32
+pnnx.Expression          pnnx_expr_40             1 1 114 115 expr=add(mul(0.764498651,@0),-0.291875541) #114=(1,480,3,?)f32 #115=(1,480,3,?)f32
+F.hardswish              F.hardswish_82           1 1 115 116 $input=115 #115=(1,480,3,?)f32 #116=(1,480,3,?)f32
+pnnx.Expression          pnnx_expr_36             1 1 116 117 expr=add(mul(0.477351815,@0),0.164795071) #116=(1,480,3,?)f32 #117=(1,480,3,?)f32
+nn.Conv2d                conv2d_36                1 1 117 118 bias=True dilation=(1,1) groups=480 in_channels=480 kernel_size=(5,5) out_channels=480 padding=(2,2) padding_mode=zeros stride=(1,1) @bias=(480)f32 @weight=(480,1,5,5)f32 $input=117 #117=(1,480,3,?)f32 #118=(1,480,3,?)f32
+pnnx.Expression          pnnx_expr_32             1 1 118 119 expr=add(mul(0.426318109,@0),0.29580003) #118=(1,480,3,?)f32 #119=(1,480,3,?)f32
+F.hardswish              F.hardswish_83           1 1 119 120 $input=119 #119=(1,480,3,?)f32 #120=(1,480,3,?)f32
+pnnx.Expression          pnnx_expr_28             1 1 120 121 expr=add(mul(0.103936717,@0),8.11561767e-4) #120=(1,480,3,?)f32 #121=(1,480,3,?)f32
+nn.Conv2d                conv2d_37                1 1 121 122 bias=True dilation=(1,1) groups=1 in_channels=480 kernel_size=(1,1) out_channels=480 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(480)f32 @weight=(480,480,1,1)f32 $input=121 #121=(1,480,3,?)f32 #122=(1,480,3,?)f32
+pnnx.Expression          pnnx_expr_24             1 1 122 123 expr=add(mul(2.04554439,@0),-0.173862681) #122=(1,480,3,?)f32 #123=(1,480,3,?)f32
+F.hardswish              F.hardswish_84           1 1 123 124 $input=123 #123=(1,480,3,?)f32 #124=(1,480,3,?)f32
+pnnx.Expression          pnnx_expr_20             1 1 124 125 expr=add(mul(3.23440766,@0),-0.354521185) #124=(1,480,3,?)f32 #125=(1,480,3,?)f32
+F.avg_pool2d             F.avg_pool2d_128         1 1 125 126 ceil_mode=False count_include_pad=False divisor_override=None kernel_size=(3,2) padding=(0,0) stride=(3,2) $input=125 #125=(1,480,3,?)f32 #126=(1,480,1,?)f32
+nn.Conv2d                convbn2d_1               1 1 126 127 bias=True dilation=(1,1) groups=1 in_channels=480 kernel_size=(1,3) out_channels=60 padding=(0,1) padding_mode=zeros stride=(1,1) @bias=(60)f32 @weight=(60,480,1,3)f32 $input=126 #126=(1,480,1,?)f32 #127=(1,60,1,?)f32
+F.silu                   silu_0                   1 1 127 128 $input=127 #127=(1,60,1,?)f32 #128=(1,60,1,?)f32
+nn.Conv2d                convbn2d_2               1 1 128 129 bias=True dilation=(1,1) groups=1 in_channels=60 kernel_size=(1,1) out_channels=120 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(120)f32 @weight=(120,60,1,1)f32 $input=128 #128=(1,60,1,?)f32 #129=(1,120,1,?)f32
+F.silu                   silu_1                   1 1 129 130 $input=129 #129=(1,120,1,?)f32 #130=(1,120,1,?)f32
+Tensor.reshape           Tensor.reshape_33        1 1 130 131 shape=(1,120,-1) $input=130 #130=(1,120,1,?)f32 #131=(1,120,?)f32
+Tensor.permute           Tensor.permute_12        1 1 131 132 dims=(0,2,1) $input=131 #131=(1,120,?)f32 #132=(1,?,120)f32
+nn.LayerNorm             ln_0                     1 1 132 133 elementwise_affine=True eps=1.000000e-5 normalized_shape=(120) @bias=(120)f32 @weight=(120)f32 $input=132 #132=(1,?,120)f32 #133=(1,?,120)f32
+nn.MultiheadAttention    attention_0              1 1 133 134 add_bias_kv=False add_zero_attn=False batch_first=True bias=True embed_dim=120 kdim=120 num_heads=8 vdim=120 @in_proj_bias=(360)f32 @in_proj_weight=(360,120)f32 @out_proj.bias=(120)f32 @out_proj.weight=(120,120)f32 $input=133 #133=(1,?,120)f32 #134=(1,?,120)f32
+pnnx.Expression          pnnx_expr_14             2 1 132 134 135 expr=add(@0,@1) #132=(1,?,120)f32 #134=(1,?,120)f32 #135=(1,?,120)f32
+nn.LayerNorm             ln_1                     1 1 135 136 elementwise_affine=True eps=1.000000e-5 normalized_shape=(120) @bias=(120)f32 @weight=(120)f32 $input=135 #135=(1,?,120)f32 #136=(1,?,120)f32
+nn.Linear                F_linear_2               1 1 136 137 bias=True in_features=120 out_features=240 @bias=(240)f32 @weight=(240,120)f32 $input=136 #136=(1,?,120)f32 #137=(1,?,240)f32
+F.silu                   silu_2                   1 1 137 138 $input=137 #137=(1,?,240)f32 #138=(1,?,240)f32
+nn.Linear                F_linear_3               1 1 138 139 bias=True in_features=240 out_features=120 @bias=(120)f32 @weight=(120,240)f32 $input=138 #138=(1,?,240)f32 #139=(1,?,120)f32
+pnnx.Expression          pnnx_expr_12             2 1 135 139 140 expr=add(@0,@1) #135=(1,?,120)f32 #139=(1,?,120)f32 #140=(1,?,120)f32
+nn.LayerNorm             ln_2                     1 1 140 141 elementwise_affine=True eps=1.000000e-5 normalized_shape=(120) @bias=(120)f32 @weight=(120)f32 $input=140 #140=(1,?,120)f32 #141=(1,?,120)f32
+nn.MultiheadAttention    attention_1              1 1 141 142 add_bias_kv=False add_zero_attn=False batch_first=True bias=True embed_dim=120 kdim=120 num_heads=8 vdim=120 @in_proj_bias=(360)f32 @in_proj_weight=(360,120)f32 @out_proj.bias=(120)f32 @out_proj.weight=(120,120)f32 $input=141 #141=(1,?,120)f32 #142=(1,?,120)f32
+pnnx.Expression          pnnx_expr_9              2 1 140 142 143 expr=add(@0,@1) #140=(1,?,120)f32 #142=(1,?,120)f32 #143=(1,?,120)f32
+nn.LayerNorm             ln_3                     1 1 143 144 elementwise_affine=True eps=1.000000e-5 normalized_shape=(120) @bias=(120)f32 @weight=(120)f32 $input=143 #143=(1,?,120)f32 #144=(1,?,120)f32
+nn.Linear                F_linear_6               1 1 144 145 bias=True in_features=120 out_features=240 @bias=(240)f32 @weight=(240,120)f32 $input=144 #144=(1,?,120)f32 #145=(1,?,240)f32
+F.silu                   silu_3                   1 1 145 146 $input=145 #145=(1,?,240)f32 #146=(1,?,240)f32
+nn.Linear                F_linear_7               1 1 146 147 bias=True in_features=240 out_features=120 @bias=(120)f32 @weight=(120,240)f32 $input=146 #146=(1,?,240)f32 #147=(1,?,120)f32
+pnnx.Expression          pnnx_expr_7              2 1 143 147 148 expr=add(@0,@1) #143=(1,?,120)f32 #147=(1,?,120)f32 #148=(1,?,120)f32
+nn.LayerNorm             ln_4                     1 1 148 149 elementwise_affine=True eps=1.000000e-6 normalized_shape=(120) @bias=(120)f32 @weight=(120)f32 $input=148 #148=(1,?,120)f32 #149=(1,?,120)f32
+Tensor.reshape           Tensor.reshape_32        1 1 149 150 shape=(1,1,-1,120) #149=(1,?,120)f32 #150=(1,1,?,120)f32
+Tensor.permute           Tensor.permute_19        1 1 150 151 dims=(0,3,1,2) $input=150 #150=(1,1,?,120)f32 #151=(1,120,1,?)f32
+nn.Conv2d                convbn2d_3               1 1 151 152 bias=True dilation=(1,1) groups=1 in_channels=120 kernel_size=(1,1) out_channels=480 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(480)f32 @weight=(480,120,1,1)f32 $input=151 #151=(1,120,1,?)f32 #152=(1,480,1,?)f32
+F.silu                   silu_4                   1 1 152 153 $input=152 #152=(1,480,1,?)f32 #153=(1,480,1,?)f32
+torch.cat                torch.cat_11             2 1 126 153 154 dim=1 #126=(1,480,1,?)f32 #153=(1,480,1,?)f32 #154=(1,960,1,?)f32
+nn.Conv2d                convbn2d_4               1 1 154 155 bias=True dilation=(1,1) groups=1 in_channels=960 kernel_size=(1,3) out_channels=60 padding=(0,1) padding_mode=zeros stride=(1,1) @bias=(60)f32 @weight=(60,960,1,3)f32 $input=154 #154=(1,960,1,?)f32 #155=(1,60,1,?)f32
+F.silu                   silu_5                   1 1 155 156 $input=155 #155=(1,60,1,?)f32 #156=(1,60,1,?)f32
+nn.Conv2d                convbn2d_5               1 1 156 157 bias=True dilation=(1,1) groups=1 in_channels=60 kernel_size=(1,1) out_channels=120 padding=(0,0) padding_mode=zeros stride=(1,1) @bias=(120)f32 @weight=(120,60,1,1)f32 $input=156 #156=(1,60,1,?)f32 #157=(1,120,1,?)f32
+F.silu                   silu_6                   1 1 157 158 $input=157 #157=(1,120,1,?)f32 #158=(1,120,1,?)f32
+torch.squeeze            torch.squeeze_29         1 1 158 159 dim=2 $input=158 #158=(1,120,1,?)f32 #159=(1,120,?)f32
+Tensor.permute           Tensor.permute_20        1 1 159 160 dims=(0,2,1) $input=159 #159=(1,120,?)f32 #160=(1,?,120)f32
+nn.Linear                F_linear_8               1 1 160 161 bias=True in_features=120 out_features=18385 @bias=(18385)f32 @weight=(18385,120)f32 $input=160 #160=(1,?,120)f32 #161=(1,?,18385)f32
+F.softmax                F.softmax_98             1 1 161 162 dim=2 $input=161 #161=(1,?,18385)f32
+pnnx.Output              out0                     1 0 162

@@ -11,6 +11,10 @@
     {
       "name": "EntryAbility_label",
       "value": "label"
+    },
+    {
+      "name": "camera_permission_reason",
+      "value": "用于拍摄手写汉字图片并进行端侧识别"
     }
   ]
 }

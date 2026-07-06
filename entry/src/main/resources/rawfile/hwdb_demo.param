@@ -1,0 +1,6 @@
+7767517
+4 4
+Input            input            0 1 input 0=1 1=64 2=64
+Flatten          flatten          1 1 input flat
+InnerProduct     fc               1 1 flat logits 0=10 1=1 2=40960
+Softmax          prob             1 1 logits prob 0=0
